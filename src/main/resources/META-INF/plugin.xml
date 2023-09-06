@@ -1,0 +1,46 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>lk.ijse.javafx-controller-boilerplate-generator</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Java FX Controller Boilerplate Generator</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="suranga@ijse.lk" url="https://ijse.lk">Institute of Software Engineering</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+        <p>
+            This plugin for IntelliJ IDEA simplifies JavaFX development by automatically generating Controller class
+            boilerplate code based on the corresponding FXML file. With just a click, developers can streamline their
+            workflow, ensuring a consistent and error-free linkage between their FXML layouts and Controller classes.
+            Whether you're a novice or an experienced JavaFX developer,
+            this tool offers a seamless experience in enhancing your JavaFX projects.
+        </p>
+
+        <h4>Developed by: Ranjith Suranga <suranga@ijse.lk> (https://ijse.lk/dep)</h4>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="lk.ijse.javafx.plugin.action.GenerateControllerAction"
+                class="lk.ijse.javafx.plugin.action.GenerateControllerAction"
+                icon="AllIcons.Actions.BuildLoadChanges"
+                text="Generate Controller Boilerplate" description="Generate controller boilerplate">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
