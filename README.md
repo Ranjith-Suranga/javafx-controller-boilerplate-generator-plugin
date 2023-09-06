@@ -6,6 +6,9 @@ workflow, ensuring a consistent and error-free linkage between their FXML layout
 Whether you're a novice or an experienced JavaFX developer,
 this tool offers a seamless experience in enhancing your JavaFX projects.
 
+### Version
+1.0.0
+
 ### License
 Copyright &copy; 2023 D M R Suranga. All Rights Reserved. <br>
 This project is licensed under the [MIT](/LICENSE.txt) License.
